@@ -4,7 +4,7 @@
 
 ## Installation
 
-Requires `python3` and the python libraries `bibtexparser ` and `requests `, which can be installed using `pip3 install bibtexparser requests`.
+Requires `python3` and the python libraries `bibtexparser ` and `requests`, which can be installed using `pip3 install bibtexparser requests`.
 
 ## Usage
 
