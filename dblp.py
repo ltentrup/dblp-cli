@@ -111,7 +111,7 @@ def merge_with_proceedings(inproceedings, proceedings):
     if 'series' in proceedings:
         inproceedings['series'] = proceedings['series']
     if 'publisher' in proceedings:
-        inproceedings['publisher'] = proceedings['publisher']
+        inproceedings['publisher'] = shorten_publisher(proceedings['publisher'])
 
     del inproceedings['crossref']
 
@@ -128,6 +128,12 @@ def remove_month(entry):
 def shorten_lncs(entry):
     if 'series' in entry and entry['series'] == 'Lecture Notes in Computer Science':
         entry['series'] = 'LNCS'
+
+def shorten_publisher(publisher):
+    if publisher == "Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik":
+        return "Schloss Dagstuhl -- LZI"
+    else:
+        return publisher
 
 if __name__ == "__main__":
     main()
